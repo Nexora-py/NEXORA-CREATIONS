@@ -1,145 +1,171 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #0d1117;
     color: #e6edf3;
+    text-align: center;
     overflow-x: hidden;
 }
 
-/* NAVIGATION */
+/* PARTICLES FIX (IMPORTANT) */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* NAV */
 nav {
+    background: linear-gradient(90deg, #1f6feb, #0d1117);
+    padding: 15px;
     position: sticky;
     top: 0;
-    background: #161b22;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 2px solid #1f6feb;
-    z-index: 100;
+    z-index: 10;
 }
 
 nav a {
-    color: #58a6ff;
-    margin: 0 15px;
+    color: white;
+    margin: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffffff;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
     padding: 80px 20px;
 }
 
 .hero h1 {
     font-size: 45px;
     color: #58a6ff;
-    text-shadow: 0 0 20px rgba(31,111,235,0.5);
 }
 
 .hero h2 {
-    margin-top: 10px;
     color: #c9d1d9;
 }
 
-.hero p {
-    margin-top: 10px;
-    color: #8b949e;
-}
-
 /* BADGES */
-.badges {
-    margin-top: 20px;
-}
-
 .badges span {
     display: inline-block;
     background: #1f6feb;
-    color: white;
     padding: 6px 12px;
     margin: 5px;
     border-radius: 20px;
     font-size: 12px;
 }
 
-/* CTA BUTTON */
-.cta {
-    display: inline-block;
+/* CTA */
+.cta-group {
     margin-top: 20px;
-    padding: 12px 20px;
-    background: #1f6feb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
 }
 
-.cta:hover {
-    background: #58a6ff;
+.cta, .cta2 {
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta {
+    background: #1f6feb;
+    color: white;
+}
+
+.cta2 {
+    border: 1px solid #1f6feb;
+    color: #1f6feb;
 }
 
 /* CARDS */
 .card {
+    background: rgba(22, 27, 34, 0.9);
     width: 80%;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 25px;
-    background: #161b22;
-    border: 1px solid #1f6feb;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(31,111,235,0.2);
+    border: 1px solid #30363d;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
     box-shadow: 0 0 30px rgba(31,111,235,0.4);
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
     background: #1f6feb;
     color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #58a6ff;
+/* TEXTAREA RUNNER */
+textarea {
+    width: 90%;
+    height: 150px;
+    background: #0d1117;
+    color: #58a6ff;
+    border: 1px solid #1f6feb;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
 }
 
-/* CONTACT */
-#contact p {
-    margin: 5px 0;
-    color: #8b949e;
+/* RUN BUTTON */
+button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #1f6feb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #388bfd;
+}
+
+/* OUTPUT */
+pre {
+    text-align: left;
+    background: #161b22;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: #58a6ff;
+    min-height: 40px;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
     background: #161b22;
-    border-top: 2px solid #1f6feb;
+    padding: 20px;
     margin-top: 40px;
-    color: #58a6ff;
+    border-top: 1px solid #30363d;
 }
 
-/* PARTICLES BACKGROUND */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* MOBILE */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
 }

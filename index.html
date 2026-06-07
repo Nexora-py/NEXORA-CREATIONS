@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXORA CREATIONS | Python Developer</title>
 
-    <!-- AOS ANIMATION -->
+    <!-- CSS (Flask SAFE) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* FIX: particles background must have size */
+        #particles-js{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -48,7 +61,6 @@
     <h2>🌟 About Me</h2>
     <p>
         I am Hadi, a student developer passionate about Python, web development, and building real-world applications.
-        Nexora Creations is my journey of learning and building projects step by step.
     </p>
 </section>
 
@@ -57,20 +69,17 @@
 
     <div class="card" data-aos="zoom-in">
         <h2>🧮 Python Calculator</h2>
-        <p>Basic calculator using Python</p>
-        <a class="btn" href="calculator.py" download>⬇ Download</a>
+        <a href="/static/calculator.py" download>⬇ Download</a>
     </div>
 
     <div class="card" data-aos="zoom-in">
         <h2>🎮 Number Guessing Game</h2>
-        <p>Level-based difficulty game</p>
-        <a class="btn" href="number_guessing.py" download>⬇ Download</a>
+        <a href="/static/number_guessing.py" download>⬇ Download</a>
     </div>
 
     <div class="card" data-aos="zoom-in">
         <h2>📊 Multiplication Table</h2>
-        <p>Generate tables using Python</p>
-        <a class="btn" href="multiplication_table.py" download>⬇ Download</a>
+        <a href="/static/multiplication_table.py" download>⬇ Download</a>
     </div>
 
 </section>
