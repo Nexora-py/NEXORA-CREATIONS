@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,222 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#stats">Stats</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>🚀 NEXORA CREATIONS</h1>
+
+    <h2>Code. Create. Innovate.</h2>
+
+    <p>
+        Premium software solutions, Python projects,
+        and innovative digital creations.
+    </p>
+
+    <div class="badges">
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Flask</span>
+        <span>GitHub</span>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="card" id="about">
+
+    <h2>🌟 About Me</h2>
+
+    <p>
+        I am Hadi, a student and aspiring software developer.
+        Through NEXORA CREATIONS, I build Python projects,
+        web applications, and continuously improve my skills.
+    </p>
+
+    <h3>🎯 Mission</h3>
+
+    <p>
+        To build useful software, learn modern technologies,
+        and create innovative digital solutions.
+    </p>
+
+    <h3>🚀 Current Goal</h3>
+
+    <p>
+        Build 10 Python projects and become a full-stack developer.
+    </p>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="card" id="projects">
+
+    <h2>🧮 Projects</h2>
+
+    <h3>Python Calculator</h3>
+
+    <p>
+        Performs Addition, Subtraction,
+        Multiplication, Division and Modulus.
+    </p>
+
+    <a class="btn" href="/static/calculator.py" download>
+        Download Calculator
+    </a>
+
+    <hr>
+
+    <h3>Advanced Number Guessing Game</h3>
+
+    <p>
+        Level-based guessing game with
+        increasing difficulty.
+    </p>
+
+    <a class="btn" href="/static/number_guessing.py" download>
+        Download Game
+    </a>
+
+    <hr>
+
+    <h3>Multiplication Table Generator</h3>
+
+    <p>
+        Generates multiplication tables
+        from 1 to 10.
+    </p>
+
+    <a class="btn" href="/static/multiplication_table.py" download>
+        Download Program
+    </a>
+
+</section>
+
+<!-- UPCOMING PROJECTS -->
+<section class="card">
+
+    <h2>🔮 Upcoming Projects</h2>
+
+    <p>❓ Quiz Game <span>Coming Soon</span></p>
+    <p>🔐 Password Generator <span>Coming Soon</span></p>
+    <p>🎮 Rock Paper Scissors <span>Coming Soon</span></p>
+    <p>🌦 Weather App <span>Coming Soon</span></p>
+
+</section>
+
+<!-- PYTHON RUNNER -->
+<section class="card">
+
+    <h2>⚡ Python Online Runner</h2>
+
+    <textarea id="code"
+placeholder="Write Python code here..."></textarea>
+
+    <br><br>
+
+    <button onclick="runCode()">Run Code</button>
+
+    <pre id="output">
+Output will appear here...
+    </pre>
+
+</section>
+
+<!-- PORTFOLIO STATS -->
+<section class="card" id="stats">
+
+    <h2>📈 Portfolio Stats</h2>
+
+    <p>🚀 Projects Completed: 3</p>
+    <p>💻 Website Status: Online</p>
+    <p>🐍 Main Language: Python</p>
+    <p>🌐 Web Stack: HTML, CSS, Flask</p>
+    <p>📚 Learning Journey: Active</p>
+
+</section>
+
+<!-- SKILLS -->
+<section class="card" id="skills">
+
+    <h2>🛠 Skills</h2>
+
+    <p>🐍 Python</p>
+    <p>🌐 HTML</p>
+    <p>🎨 CSS</p>
+    <p>⚙ Flask</p>
+    <p>💻 Git & GitHub</p>
+
+</section>
+
+<!-- RESUME -->
+<section class="card">
+
+    <h2>📄 Resume</h2>
+
+    <p>
+        Resume will be added soon.
+    </p>
+
+</section>
+
+<!-- FOUNDER -->
+<section class="card">
+
+    <h2>👑 Founder</h2>
+
+    <p><strong>Hadi</strong></p>
+
+    <p>
+        Student Developer and Founder of
+        NEXORA CREATIONS.
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+<section class="card" id="contact">
+
+    <h2>📬 Contact</h2>
+
+    <p>📧 Email: hadivga@gmail.com</p>
+
+    <p>
+        💻 GitHub:
+        <a href="https://github.com/Nexora-py"
+           target="_blank">
+           Nexora-py
+        </a>
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 NEXORA CREATIONS</p>
+
+    <p>
+        Built with Python, Flask and GitHub
+    </p>
+
+    <p>
+        Created by Hadi
+    </p>
+
+</footer>
 
 <script>
 function runCode() {
@@ -25,107 +242,12 @@ function runCode() {
         document.getElementById("output").innerText = data.output;
     })
     .catch(err => {
-        document.getElementById("output").innerText = "Error running code";
+        document.getElementById("output").innerText =
+            "Error running code";
     });
 }
 </script>
 
-<body>
-
-<!-- NAV -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#stats">Stats</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>NEXORA CREATIONS</h1>
-    <p>Code. Create. Innovate.</p>
-    <p>Premium software solutions, Python projects, and innovative digital creations.</p>
-</section>
-
-<!-- ABOUT -->
-<section class="card" id="about">
-    <h2>🌟 About Me</h2>
-    <p>
-        I am Hadi, a student and aspiring software developer. Through NEXORA CREATIONS, I build Python projects and web apps.
-    </p>
-
-    <h3>🎯 Mission</h3>
-    <p>To build useful software and improve skills continuously.</p>
-
-    <h3>🚀 Goal</h3>
-    <p>Build 10 Python projects and become a full-stack developer.</p>
-</section>
-
-<!-- PROJECTS -->
-<section class="card" id="projects">
-    <h2>🧮 Projects</h2>
-
-    <p>Calculator</p>
-    <a class="btn" href="/static/calculator.py" download>Download</a>
-
-    <p>Number Guessing Game</p>
-    <a class="btn" href="/static/number_guessing.py" download>Download</a>
-
-    <p>Multiplication Table</p>
-    <a class="btn" href="/static/multiplication_table.py" download>Download</a>
-</section>
-
-<h2>🔮 Upcoming Projects</h2>
-
-<p>❓ Quiz Game <span>🚧 Coming Soon</span></p>
-<p>🔐 Password Generator <span>🚧 Coming Soon</span></p>
-<p>🎮 Rock Paper Scissors <span>🚧 Coming Soon</span></p>
-<p>🌦 Weather App <span>🚧 Coming Soon</span></p>
-
-<section class="card" id="run">
-
-    <h2>⚡ Python Online Runner</h2>
-
-    <textarea id="code" placeholder="Write Python code here..."></textarea>
-
-    <br><br>
-
-    <button onclick="runCode()">Run Code</button>
-
-    <pre id="output">Output will appear here...</pre>
-
-</section>
-
-<!-- STATS -->
-<section class="card" id="stats">
-    <h2>📈 Stats</h2>
-    <p>🚀 Projects Completed: 3</p>
-    <p>🐍 Python Developer</p>
-    <p>🌐 HTML & CSS Learner</p>
-</section>
-
-<!-- SKILLS -->
-<section class="card" id="skills">
-    <h2>🛠 Skills</h2>
-    <p>🐍 Python</p>
-    <p>🌐 HTML</p>
-    <p>🎨 CSS</p>
-    <p>💻 Git & GitHub</p>
-</section>
-
-<!-- CONTACT -->
-<section class="card" id="contact">
-    <h2>📬 Contact</h2>
-    <p>Email: hadivga@gmail.com</p>
-    <p>GitHub: Nexora-py</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 NEXORA CREATIONS</p>
-    <p>Created by Hadi</p>
-</footer>
-
 </body>
 </html>
+```
