@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import io
-import sys
+import contextlib
 
 app = Flask(__name__)
 
@@ -13,24 +13,21 @@ def run_code():
     data = request.get_json()
     code = data.get("code", "")
 
-    old_stdout = sys.stdout
-    sys.stdout = io.StringIO()
+    output = io.StringIO()
 
     try:
-        exec(code, {})
-        output = sys.stdout.getvalue()
+        with contextlib.redirect_stdout(output):
+            exec(code, {})
 
-        if not output:
-            output = "Code executed successfully (no output)"
+        result = output.getvalue()
 
-        return jsonify({"output": output})
+        if not result:
+            result = "Code executed successfully (no output)"
 
     except Exception as e:
-        return jsonify({"output": str(e)})
+        result = str(e)
 
-    finally:
-        sys.stdout = old_stdout
-
+    return jsonify({"output": result})
 
 if __name__ == "__main__":
     app.run(debug=True)

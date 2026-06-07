@@ -4,88 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA CREATIONS | Python Developer</title>
+    <title>NEXORA CREATIONS</title>
 
-    <!-- CSS (Flask SAFE) -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-        /* FIX: particles background must have size */
-        #particles-js{
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
-    </style>
 </head>
+
+<script>
+function runCode() {
+    fetch("/run", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            code: document.getElementById("code").value
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("output").innerText = data.output;
+    })
+    .catch(err => {
+        document.getElementById("output").innerText = "Error running code";
+    });
+}
+</script>
 
 <body>
 
-<!-- PARTICLES BACKGROUND -->
-<div id="particles-js"></div>
-
 <!-- NAV -->
 <nav>
-    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#stats">Stats</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home" data-aos="fade-up">
-    <h1>🚀 NEXORA CREATIONS</h1>
-    <h2>Python Developer | Student | Builder</h2>
-    <p>Building Python projects, web apps & startup-level software</p>
-
-    <div class="badges">
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Beginner → Pro</span>
-    </div>
-
-    <div class="cta-group">
-        <a href="#projects" class="cta">Explore Projects</a>
-    </div>
+<section class="hero">
+    <h1>NEXORA CREATIONS</h1>
+    <p>Code. Create. Innovate.</p>
+    <p>Premium software solutions, Python projects, and innovative digital creations.</p>
 </section>
 
 <!-- ABOUT -->
-<section class="card" id="about" data-aos="fade-right">
+<section class="card" id="about">
     <h2>🌟 About Me</h2>
     <p>
-        I am Hadi, a student developer passionate about Python, web development, and building real-world applications.
+        I am Hadi, a student and aspiring software developer. Through NEXORA CREATIONS, I build Python projects and web apps.
     </p>
+
+    <h3>🎯 Mission</h3>
+    <p>To build useful software and improve skills continuously.</p>
+
+    <h3>🚀 Goal</h3>
+    <p>Build 10 Python projects and become a full-stack developer.</p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section class="card" id="projects">
+    <h2>🧮 Projects</h2>
 
-    <div class="card" data-aos="zoom-in">
-        <h2>🧮 Python Calculator</h2>
-        <a href="/static/calculator.py" download>⬇ Download</a>
-    </div>
+    <p>Calculator</p>
+    <a class="btn" href="/static/calculator.py" download>Download</a>
 
-    <div class="card" data-aos="zoom-in">
-        <h2>🎮 Number Guessing Game</h2>
-        <a href="/static/number_guessing.py" download>⬇ Download</a>
-    </div>
+    <p>Number Guessing Game</p>
+    <a class="btn" href="/static/number_guessing.py" download>Download</a>
 
-    <div class="card" data-aos="zoom-in">
-        <h2>📊 Multiplication Table</h2>
-        <a href="/static/multiplication_table.py" download>⬇ Download</a>
-    </div>
+    <p>Multiplication Table</p>
+    <a class="btn" href="/static/multiplication_table.py" download>Download</a>
+</section>
+
+<section class="card" id="run">
+
+    <h2>⚡ Python Online Runner</h2>
+
+    <textarea id="code" placeholder="Write Python code here..."></textarea>
+
+    <br><br>
+
+    <button onclick="runCode()">Run Code</button>
+
+    <pre id="output">Output will appear here...</pre>
 
 </section>
 
+<!-- STATS -->
+<section class="card" id="stats">
+    <h2>📈 Stats</h2>
+    <p>🚀 Projects Completed: 3</p>
+    <p>🐍 Python Developer</p>
+    <p>🌐 HTML & CSS Learner</p>
+</section>
+
+<!-- SKILLS -->
+<section class="card" id="skills">
+    <h2>🛠 Skills</h2>
+    <p>🐍 Python</p>
+    <p>🌐 HTML</p>
+    <p>🎨 CSS</p>
+    <p>💻 Git & GitHub</p>
+</section>
+
 <!-- CONTACT -->
-<section class="card" id="contact" data-aos="fade-up">
+<section class="card" id="contact">
     <h2>📬 Contact</h2>
     <p>Email: hadivga@gmail.com</p>
     <p>GitHub: Nexora-py</p>
@@ -94,30 +117,8 @@
 <!-- FOOTER -->
 <footer>
     <p>© 2026 NEXORA CREATIONS</p>
-    <p>Built by Hadi 🚀</p>
+    <p>Created by Hadi</p>
 </footer>
-
-<!-- PARTICLES JS -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60 },
-    color: { value: "#1f6feb" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5 },
-    size: { value: 3 },
-    move: { enable: true, speed: 2 }
-  }
-});
-</script>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
 
 </body>
 </html>
