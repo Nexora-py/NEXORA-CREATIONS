@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA CREATIONS</title>
+    <title>FORGE CODE INDIA</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -24,13 +24,17 @@
 <!-- HERO -->
 <section class="hero">
 
-    <h1>🚀 NEXORA CREATIONS</h1>
+    <img src="{{ url_for('static', filename='logo.png') }}"
+         alt="Forge Code India Logo"
+         width="220">
+
+    <h1>🚀 FORGE CODE INDIA</h1>
 
     <h2>Code. Create. Innovate.</h2>
 
     <p>
-        Premium software solutions, Python projects,
-        and innovative digital creations.
+        Building Python projects, web applications,
+        and innovative software solutions.
     </p>
 
     <div class="badges">
@@ -49,8 +53,8 @@
     <h2>🌟 About Me</h2>
 
     <p>
-        I am Hadi, a student and aspiring software developer.
-        Through NEXORA CREATIONS, I build Python projects,
+        I am Hadi, a Class 11 student and aspiring software developer.
+        Through FORGE CODE INDIA, I build Python projects,
         web applications, and continuously improve my skills.
     </p>
 
@@ -78,7 +82,7 @@
 
     <p>
         Performs Addition, Subtraction,
-        Multiplication, Division and Modulus.
+        Multiplication, Division and Modulus operations.
     </p>
 
     <a class="btn" href="/static/calculator.py" download>
@@ -91,7 +95,7 @@
 
     <p>
         Level-based guessing game with
-        increasing difficulty.
+        increasing difficulty and 3 chances.
     </p>
 
     <a class="btn" href="/static/number_guessing.py" download>
@@ -131,7 +135,7 @@
     <h2>⚡ Python Online Runner</h2>
 
     <textarea id="code"
-placeholder="Write Python code here..."></textarea>
+        placeholder="Write Python code here..."></textarea>
 
     <br><br>
 
@@ -143,7 +147,7 @@ Output will appear here...
 
 </section>
 
-<!-- PORTFOLIO STATS -->
+<!-- STATS -->
 <section class="card" id="stats">
 
     <h2>📈 Portfolio Stats</h2>
@@ -164,7 +168,7 @@ Output will appear here...
     <p>🐍 Python</p>
     <p>🌐 HTML</p>
     <p>🎨 CSS</p>
-    <p>⚙ Flask</p>
+    <p>⚙️ Flask</p>
     <p>💻 Git & GitHub</p>
 
 </section>
@@ -175,8 +179,14 @@ Output will appear here...
     <h2>📄 Resume</h2>
 
     <p>
-        Resume will be added soon.
+        Download my latest resume.
     </p>
+
+    <a class="btn"
+       href="{{ url_for('static', filename='Hadi_Resume.pdf') }}"
+       download>
+        ⬇ Download Resume
+    </a>
 
 </section>
 
@@ -188,8 +198,8 @@ Output will appear here...
     <p><strong>Hadi</strong></p>
 
     <p>
-        Student Developer and Founder of
-        NEXORA CREATIONS.
+        Class 11 Student Developer and Founder of
+        FORGE CODE INDIA.
     </p>
 
 </section>
@@ -214,7 +224,7 @@ Output will appear here...
 <!-- FOOTER -->
 <footer>
 
-    <p>© 2026 NEXORA CREATIONS</p>
+    <p>© 2026 FORGE CODE INDIA</p>
 
     <p>
         Built with Python, Flask and GitHub

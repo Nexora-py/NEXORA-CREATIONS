@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* PARTICLES FIX */
+/* PARTICLES BACKGROUND */
 #particles-js {
     position: fixed;
     top: 0;
@@ -22,13 +22,13 @@ body {
     pointer-events: none;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
     background: linear-gradient(90deg, #1f6feb, #0d1117);
     padding: 15px;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
 }
 
 nav a {
@@ -36,71 +36,63 @@ nav a {
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* HERO */
+nav a:hover {
+    color: #58a6ff;
+}
+
+/* HERO SECTION */
 .hero {
-    padding: 80px 20px;
+    padding: 100px 20px;
+}
+
+.hero img {
+    width: 220px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(88,166,255,0.4));
 }
 
 .hero h1 {
-    font-size: 45px;
+    font-size: 50px;
     color: #58a6ff;
+    text-shadow: 0 0 20px rgba(88,166,255,0.6);
+    margin-bottom: 10px;
 }
 
 .hero h2 {
     color: #c9d1d9;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
 }
 
 /* BADGES */
-.badges span {
-    display: inline-block;
-    background: #1f6feb;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-/* CTA */
-.cta-group {
+.badges {
     margin-top: 20px;
 }
 
-.cta, .cta2 {
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+.badges span {
     display: inline-block;
-    transition: 0.2s;
-}
-
-.cta {
     background: #1f6feb;
     color: white;
-}
-
-.cta:hover {
-    background: #388bfd;
-}
-
-.cta2 {
-    border: 1px solid #1f6feb;
-    color: #1f6feb;
-}
-
-.cta2:hover {
-    background: #1f6feb;
-    color: white;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
 /* CARDS */
 .card {
-    background: rgba(22, 27, 34, 0.9);
+    background: rgba(22, 27, 34, 0.95);
     width: 80%;
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 25px;
     border-radius: 15px;
     border: 1px solid #30363d;
@@ -112,22 +104,40 @@ nav a {
     box-shadow: 0 0 30px rgba(31,111,235,0.4);
 }
 
-/* BUTTON */
+.card h2 {
+    color: #58a6ff;
+}
+
+.card h3 {
+    color: #c9d1d9;
+}
+
+/* PROJECT DIVIDERS */
+hr {
+    border: none;
+    border-top: 1px solid #30363d;
+    margin: 25px 0;
+}
+
+/* BUTTONS */
 .btn {
     display: inline-block;
     background: #1f6feb;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 18px;
     margin-top: 10px;
     border-radius: 8px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: #388bfd;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(88,166,255,0.5);
 }
 
-/* TEXTAREA RUNNER */
+/* RUNNER TEXTAREA */
 textarea {
     width: 90%;
     height: 150px;
@@ -137,6 +147,7 @@ textarea {
     border-radius: 10px;
     padding: 10px;
     outline: none;
+    resize: vertical;
 }
 
 /* RUN BUTTON */
@@ -148,14 +159,15 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #388bfd;
+    box-shadow: 0 0 15px rgba(88,166,255,0.5);
 }
 
-/* OUTPUT */
+/* OUTPUT BOX */
 pre {
     text-align: left;
     background: #161b22;
@@ -167,29 +179,7 @@ pre {
     overflow-x: auto;
 }
 
-/* FOOTER */
-footer {
-    background: #161b22;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #30363d;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .card {
-        width: 95%;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 8px;
-    }
-}
+/* COMING SOON BADGES */
 span {
     background: #ff9800;
     color: black;
@@ -198,11 +188,54 @@ span {
     font-size: 12px;
     margin-left: 5px;
 }
-.hero h1 {
-    font-size: 45px;
+
+/* LINKS */
+a {
     color: #58a6ff;
-    text-shadow: 0 0 20px rgba(88,166,255,0.6);
 }
-.card h2 {
-    color: #58a6ff;
+
+a:hover {
+    color: #388bfd;
+}
+
+/* FOOTER */
+footer {
+    background: #161b22;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #30363d;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero img {
+        width: 170px;
+    }
+
+    textarea {
+        width: 95%;
+    }
 }
