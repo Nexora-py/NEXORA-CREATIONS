@@ -190,3 +190,11 @@ footer {
         margin: 8px;
     }
 }
+span {
+    background: #ff9800;
+    color: black;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+}
